@@ -1,0 +1,87 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+}
+/*--nav bar--*/
+navbar{
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    border-bottom: 1px solid grey;
+}
+.logo{
+    margin: 18px 20px;
+    font-size: 25px;
+    font-weight: bold;
+}
+.main-nav{
+    padding: 10px;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.main-nav li{
+    padding: 15px 30px;
+    list-style-type: none;
+    transition: .3s;
+}
+
+.main-nav li a{
+    text-decoration: none;
+    color: black;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    font-size: 22px;
+    font-weight: lighter;
+}
+.main-nav li:hover{
+    background-color: rgb(105, 105, 105,0.3);
+}
+.main-nav li.active{
+    background-color: rgb(105, 105, 105,0.5);
+}
+#js-toggle{
+    display: none;
+}
+@media screen and (max-width : 600px){
+    navbar{
+        margin: 0px;
+        padding: 0px;
+        display: inline;
+    }
+    .main-nav{
+        width: 90%;
+        margin: 0 auto;
+        padding: 0px;
+        display: none;
+        text-align: center;
+        height: auto;
+    }
+    .visible{
+        display: block;
+    }
+    .main-nav li{
+        border-bottom: 1px solid grey;
+        
+    }
+    .main-nav li:hover{
+        background-color: rgb(105, 105, 105,0.2);
+    }
+    #js-toggle{
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 15px;
+        font-size: 22px;
+    }
+}
+/*--ends nav bar--*/
